@@ -20,7 +20,14 @@ export default function App() {
   return (
     <View style={{ padding: 50 }}>
       {Platform.OS === 'ios' && <ProgressViewIOS progress={0.5}/>}
-      {Platform.OS === 'android' && <ProgressBarAndroid progress={0.5}/>}
+      {Platform.OS === 'android' && (
+        <ProgressBarAndroid 
+          progress={0.5}
+          styleAttr='Horizontal'
+          indeterminate={false}
+          color={blue}
+        />
+      )}
       <ActivityIndicator size='large' color='#61DBFB'/>
       <Button title='click me' onPress={onButtonPress} />
       <Text>OS: {Platform.OS}</Text>
