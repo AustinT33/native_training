@@ -25,7 +25,7 @@ export default function App() {
           progress={0.5}
           styleAttr='Horizontal'
           indeterminate={false}
-          color={blue}
+          color='blue'
         />
       )}
       <ActivityIndicator size='large' color='#61DBFB'/>
