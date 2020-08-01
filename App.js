@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 export default function App() {
+  const [backgroundColor, setBackgroundColor] = useState('blue');
   return (
-    <View style={styles.container}>
-      <Text style={styles.button}>Green</Text>
-      <Text style={styles.button}>Red</Text>
+    <View style={[styles.container, { backgroundColor }]}>
+      <Text style={styles.button}
+        onPress={ () => setBackgroundColor('green')}>Green</Text>
+      <Text style={styles.button}
+        onPress={ () => setBackgroundColor('red')}>Red</Text>
     </View>
   );
 }
@@ -19,6 +22,6 @@ const styles = StyleSheet.create({
   button: {
     fontSize: 30,
     margin: 10,
-    padding: 10
+    padding: 10,
   },
 })
