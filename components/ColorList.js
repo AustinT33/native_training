@@ -3,7 +3,7 @@ import { StyleSheet, FlatList } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import ColorButton from './ColorButton';
 import ColorForm from './ColorForm';
-import { useColors } from './hooks';
+import { useColors } from '../hooks';
 
 export default function ColorList() {
   const [backgroundColor, setBackgroundColor] = useState('blue');
